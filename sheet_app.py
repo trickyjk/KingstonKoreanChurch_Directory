@@ -91,7 +91,7 @@ def load_data():
     try:
         creds = get_creds()
         client = gspread.authorize(creds)
-        sheet = client.open("KingstonKoreanChurch_Directory").sheet1
+        sheet = client.open("1rS7juNnO1AxUWekX1lCD9G1_KWonmaXbj2KIZ1wqV_k").sheet1
         data = sheet.get_all_records()
         df = pd.DataFrame(data)
         return df, sheet
